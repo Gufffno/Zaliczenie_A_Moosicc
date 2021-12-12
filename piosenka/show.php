@@ -1,3 +1,6 @@
 <?php
-var_dump($_GET);
+include "Piosenka.php";
+$piosenka=new Piosenka;
+$id=($_GET["id"]);
+$piosenka->wyswietlPiosenke($id);
 ?>

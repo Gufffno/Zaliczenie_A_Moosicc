@@ -38,5 +38,9 @@ class Wykonawca{
         echo $data["kraj_pochodzenia"];
         echo "<br>";
     }
+    public function zapiszWykonawce($data){
+        include "connect.php";
+        
+    }
 }
 ?>

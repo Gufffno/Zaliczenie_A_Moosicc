@@ -11,12 +11,36 @@ class Piosenka{
         $this->album_id=$album_id;
         $this->id=1;
     }
+    public function wyswietlPiosenki(){
+        include "connect.php";
+        $query="SELECT * FROM `piosenki`";
+        $result=mysqli_query($conn, $query);
+        while($data=mysqli_fetch_assoc($result)){
+            echo "<br>";
+            echo $data["nazwa"];
+            echo " ";
+            echo $data["dlugosc"];
+            echo " ";
+            echo $data["album_id"];
+            echo "<br>";
+        }
+    }
     public function wyswietlPiosenke($id){
-        echo $this->nazwa;
+        include "connect.php";
+        $query="SELECT * FROM `piosenki` WHERE `id` = $id";
+        $result=mysqli_query($conn,$query);
+        $data=mysqli_fetch_assoc($result);
         echo "<br>";
-        echo $this->dlugosc;
-        echo " - ";
-        echo $this->album_id;
+        echo $data["nazwa"];
+        echo " ";
+        echo $data["dlugosc"];
+        echo " ";
+        echo $data["album_id"];
+        echo "<br>";
+    }
+    public function zapiszWykonawce($data){
+        include "connect.php";
+        
     }
 }
 ?>

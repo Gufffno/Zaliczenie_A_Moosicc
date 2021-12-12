@@ -9,19 +9,33 @@
 <body>
     <h1>Moosicc</h1>
     <a href="wykonawcy">    
-        wykonawcy
+        [wykonawcy]
     </a>
     <a href="wykonawca/show">
-        show must go on
+        [show must go on]
     </a>
-
+    <a href="wykonawca/create">
+        [twórz]
+    </a>
     <br>
     <a href="albumy">    
-        albumy
+        [albumy]
+    </a>
+    <a href="album/show">
+        [show must go on]
+    </a>
+    <a href="album/create">
+        [twórz]
     </a>
     <br>
     <a href="piosenki">    
-        piosenki
+        [piosenki]
+    </a>
+    <a href="piosenka/show">
+        [show must go on]
+    </a>
+    <a href="piosenka/create">
+        [twórz]
     </a>
         <?php
         if($_GET["url"]=="wykonawcy"){
@@ -42,9 +56,29 @@
             echo " ";
             include "album/index.php";
         }
+        else if($_GET["url"]=="album/create"){
+            echo " ";
+            include "album/create.php";
+        }else if($_GET["url"]=="album/update"){
+            echo " ";
+            include "album/update.php";}
+        else if($_GET["url"]=="album/show"){
+            echo " ";
+            include "album/show.php";
+        }
         else if($_GET["url"]=="piosenki"){
             echo " ";
             include "piosenka/index.php";
+        }
+        else if($_GET["url"]=="piosenka/create"){
+            echo " ";
+            include "piosenka/create.php";
+        }else if($_GET["url"]=="piosenka/update"){
+            echo " ";
+            include "piosenka/update.php";}
+        else if($_GET["url"]=="piosenka/show"){
+            echo " ";
+            include "piosenka/show.php";
         }
         ?>
 </body>

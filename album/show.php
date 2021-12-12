@@ -1,3 +1,6 @@
 <?php
-var_dump($_GET);
+include "album.php";
+$album=new Album;
+$id=($_GET["id"]);
+$album->wyswietlAlbum($id);
 ?>
