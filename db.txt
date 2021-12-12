@@ -1,0 +1,24 @@
+wykonawcy:
+-id
+-nazwa
+-rok utworzenia
+-kraj pochodzenia
+
+albumy:
+-id
+-nazwa
+-wykonawaca id
+-rok wydania
+-ilosc piosenek
+-czas sluchania
+
+piosenki:
+-id
+-nazwa
+-album id
+-dlugosc
+
+/wykonawcy - index
+/wykonawca/create - utwórz
+/wykonwaca/update - aktualizuj
+/wykonawca/show/$id - pokaż
