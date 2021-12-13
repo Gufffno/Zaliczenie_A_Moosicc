@@ -1,5 +1,5 @@
 <?php
 include "Album.php";
 $album=new Album;
-$album->wyswietlAlbumy();
+$album->usunAlbum($_GET["id"]);
 ?>

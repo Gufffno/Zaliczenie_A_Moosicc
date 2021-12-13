@@ -11,13 +11,22 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^wykonawca/delete/([0-9]+)$ index.php?url=wykonawca/delete&id=$1 [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^album/show/([0-9]+)$ index.php?url=album/show&id=$1 [L,QSA]
+RewriteRule ^albumy/show/([0-9]+)$ index.php?url=album/show&id=$1 [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^album/update/([0-9]+)$ index.php?url=album/update&id=$1 [L,QSA]
+RewriteRule ^albumy/update/([0-9]+)$ index.php?url=album/update&id=$1 [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^album/delete/([0-9]+)$ index.php?url=album/delete&id=$1 [L,QSA]
+RewriteRule ^albumy/delete/([0-9]+)$ index.php?url=album/delete&id=$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^piosenka/show/([0-9]+)$ index.php?url=piosenka/show&id=$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^piosenka/update/([0-9]+)$ index.php?url=piosenka/update&id=$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^piosenka/delete/([0-9]+)$ index.php?url=piosenka/delete&id=$1 [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)$ index.php?url=$1 [L,QSA]

@@ -23,16 +23,15 @@ class Wykonawca{
             echo " ";
             echo $data["kraj_pochodzenia"];
             echo "<br>";
-            echo "<a href='wykonawca/show/{$data["id"]}'>
-                [show must go on]
-            </a>
-            <a href='wykonawca/update/{$data["id"]}'>
-                [update]
-            </a>
-            <a href='wykonawca/delete/{$data["id"]}'>
-                [usuń]
-            </a>";
-            
+            echo "  <a href='wykonawca/show/{$data["id"]}'>
+                        [show must go on]
+                    </a>
+                    <a href='wykonawca/update/{$data["id"]}'>
+                        [update]
+                    </a>
+                    <a href='wykonawca/delete/{$data["id"]}'>
+                        [usuń]
+                    </a>";
         }
     }
     public function wyswietlWykonawce($id){

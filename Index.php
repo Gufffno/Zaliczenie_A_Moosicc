@@ -19,9 +19,6 @@
     <a href="albumy">    
         [albumy]
     </a>
-    <a href="album/show">
-        [show must go on]
-    </a>
     <a href="album/create">
         [twórz]
     </a>
@@ -29,15 +26,12 @@
     <a href="piosenki">    
         [piosenki]
     </a>
-    <a href="piosenka/show">
-        [show must go on]
-    </a>
-    <a href="piosenka/create">
+       <a href="piosenka/create">
         [twórz]
     </a>
         <?php
         $url=$_GET["url"]?? "";
-
+echo $url;
         if($url=="wykonawcy"){
             echo " ";
             include "wykonawca/index.php";
@@ -47,7 +41,8 @@
             include "wykonawca/create.php";
         }else if($url=="wykonawca/update"){
             echo " ";
-            include "wykonawca/update.php";}
+            include "wykonawca/update.php";
+        }
         else if($url=="wykonawca/show"){
             echo " ";
             include "wykonawca/show.php";
@@ -56,7 +51,7 @@
             echo " ";
             include "wykonawca/delete.php";
         }
-        else if($url=="albumy"){
+        else if($url=="albumy/"){
             echo " ";
             include "album/index.php";
         }
@@ -65,15 +60,17 @@
             include "album/create.php";
         }else if($url=="album/update"){
             echo " ";
-            include "album/update.php";}
+            include "album/update.php";
+        }
         else if($url=="album/show"){
             echo " ";
             include "album/show.php";
         }
         else if($url=="album/delete"){
             echo " ";
-            include "album/delete.php";}
-        else if($url=="piosenki"){
+            include "album/delete.php";
+        }
+        else if($url=="piosenki/"){
             echo " ";
             include "piosenka/index.php";
         }
@@ -82,7 +79,8 @@
             include "piosenka/create.php";
         }else if($url=="piosenka/update"){
             echo " ";
-            include "piosenka/update.php";}
+            include "piosenka/update.php";
+        }
         else if($url=="piosenka/show"){
             echo " ";
             include "piosenka/show.php";

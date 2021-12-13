@@ -1,9 +1,9 @@
 <?php
 include "Piosenka.php";
 $piosenka=new Piosenka;
-/*if($_POST["submit"]){
-    
-}*/
+if($_POST["submit"]){
+    $piosenka->zapiszPiosenke($_POST);
+}
 ?>
 <form method="post">
     <input type="text" placeholder="nazwa" name="nazwa">
