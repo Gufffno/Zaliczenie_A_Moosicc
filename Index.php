@@ -31,7 +31,7 @@
     </a>
         <?php
         $url=$_GET["url"]?? "";
-echo $url;
+
         if($url=="wykonawcy"){
             echo " ";
             include "wykonawca/index.php";
