@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zaliczenie A Moosicc</title>
+    <base href="http://localhost/Zaliczenie_A_Moosicc/">
 </head>
 <body>
     <h1>Moosicc</h1>
     <a href="wykonawcy">    
         [wykonawcy]
     </a>
-    <a href="wykonawca/show">
-        [show must go on]
-    </a>
-    <a href="wykonawca/create">
+    <a href='wykonawca/create'>
         [twórz]
     </a>
     <br>
@@ -38,47 +36,60 @@
         [twórz]
     </a>
         <?php
-        if($_GET["url"]=="wykonawcy"){
+        $url=$_GET["url"]?? "";
+
+        if($url=="wykonawcy"){
             echo " ";
             include "wykonawca/index.php";
         }
-        else if($_GET["url"]=="wykonawca/create"){
+        else if($url=="wykonawca/create"){
             echo " ";
             include "wykonawca/create.php";
-        }else if($_GET["url"]=="wykonawca/update"){
+        }else if($url=="wykonawca/update"){
             echo " ";
             include "wykonawca/update.php";}
-        else if($_GET["url"]=="wykonawca/show"){
+        else if($url=="wykonawca/show"){
             echo " ";
             include "wykonawca/show.php";
         }
-        else if($_GET["url"]=="albumy"){
+        else if($url=="wykonawca/delete"){
+            echo " ";
+            include "wykonawca/delete.php";
+        }
+        else if($url=="albumy"){
             echo " ";
             include "album/index.php";
         }
-        else if($_GET["url"]=="album/create"){
+        else if($url=="album/create"){
             echo " ";
             include "album/create.php";
-        }else if($_GET["url"]=="album/update"){
+        }else if($url=="album/update"){
             echo " ";
             include "album/update.php";}
-        else if($_GET["url"]=="album/show"){
+        else if($url=="album/show"){
             echo " ";
             include "album/show.php";
         }
-        else if($_GET["url"]=="piosenki"){
+        else if($url=="album/delete"){
+            echo " ";
+            include "album/delete.php";}
+        else if($url=="piosenki"){
             echo " ";
             include "piosenka/index.php";
         }
-        else if($_GET["url"]=="piosenka/create"){
+        else if($url=="piosenka/create"){
             echo " ";
             include "piosenka/create.php";
-        }else if($_GET["url"]=="piosenka/update"){
+        }else if($url=="piosenka/update"){
             echo " ";
             include "piosenka/update.php";}
-        else if($_GET["url"]=="piosenka/show"){
+        else if($url=="piosenka/show"){
             echo " ";
             include "piosenka/show.php";
+        }
+        else if($url=="piosenka/delete"){
+            echo " ";
+            include "piosenka/delete.php";
         }
         ?>
 </body>

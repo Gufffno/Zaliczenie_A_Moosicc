@@ -1,9 +1,9 @@
 <?php
 include "Wykonawca.php";
 $wykonawca=new Wykonawca;
-/*if($_POST["submit"]){
-    
-}*/
+if($_POST["submit"]){
+    $wykonawca->zapiszWykonawce($_POST);
+}
 ?>
 <form method="post">
     <input type="text" placeholder="nazwa" name="nazwa">
